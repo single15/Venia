@@ -1,8 +1,11 @@
 import React from 'react';
+import Banner from '../components/banner/banner';
 
 
 export default function HomePage() {
     return (
-        <h3>Home Page</h3>
+        <article>
+            <Banner />
+        </article>
     )
 }

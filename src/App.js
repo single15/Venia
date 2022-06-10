@@ -1,18 +1,18 @@
 import React from 'react';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
+import Footer from './components/footer/footer';
+import Header from './components/header/header';
 import './style/index.scss';
 
 
 function App(props) {
   return (
-    <div className="container">
-      <article>
-        <Header />
-        {props.children}
-        <Footer />
-      </article>
-    </div>
+    <main>
+      <div className="container">
+          <Header />
+          {props.children}
+          <Footer />
+      </div>
+    </main>
   );
 }
 
