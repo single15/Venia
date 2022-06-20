@@ -7,7 +7,7 @@ import FilterMobile from '../../components/filter/filterMobile';
 import ProductList from '../../components/product/list';
 import { BREADCRUMB_LINKS } from '../utils';
 import { updateProducts } from '../../reducer/product';
-import './listPage.scss';
+import '../../pages/product/listPage.scss';
 import FilterDesktop from '../../components/filter/filterDesktop';
 import Dropdown from '../../components/dropdown/dropdown';
 import { useLocation } from 'react-router-dom';
