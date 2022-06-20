@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from './components/footer/footer';
-import Header from './components/header/header';
+import Footer from './components/footer/footer.js';
+import Header from './components/header/header.js';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import './style/index.scss';
 
