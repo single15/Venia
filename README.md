@@ -1,5 +1,5 @@
 # Visit Venia App
-This website is hosted at [Venia Demo App]((https://single15.github.io/product/list)).
+This website is hosted at [Venia Demo App](https://single15.github.io/product/list).
 
 ## Available Scripts
 
