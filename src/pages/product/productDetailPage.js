@@ -10,7 +10,7 @@ import { BREADCRUMB_LINKS } from "../utils";
 import Loader from './../../components/loader/loader';
 import { ReactComponent as WhishlistIcon } from '../../assets/heart.svg';
 import { ReactComponent as ShareIcon } from '../../assets/share-2.svg';
-import './productDetailPage.scss';
+import '../../pages/product/productDetailPage.scss';
 import Button from "../../components/button/button";
 import ButtonLink from "../../components/button/buttonLink";
 import ProductInfo from "../../components/product/productInfo";
