@@ -1,0 +1,25 @@
+.pagination-section {
+    width: 60%;
+    margin: 24px auto;
+
+    .selected-page {
+        text-decoration: underline;
+    }
+
+
+    .action-button {
+        text-align: center;
+        width: 52px !important;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .page-num-section {
+        display: flex;
+        justify-content: center;
+
+        .page-num-block {
+            padding: 0 10px;
+        }
+    }
+}

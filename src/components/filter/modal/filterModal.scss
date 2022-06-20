@@ -1,0 +1,21 @@
+.filter-modal {
+    .ReactModal__Content {
+        position: fixed !important;
+        inset: 0 !important;
+        padding: 0 !important;
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: var(--unnamed-font-weight-bold);
+            padding: 16px;
+            background-color: #E7E7E7;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .modal-content {
+            padding: 20px;
+        }
+    }
+}

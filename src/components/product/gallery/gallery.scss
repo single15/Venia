@@ -1,0 +1,21 @@
+.gallery-section {
+    display: flex;
+    
+    .image-options {
+        margin-right: 16px;
+
+        .option {
+            padding: 4px;
+            margin-bottom: 16px;
+            cursor: pointer;
+
+            &:hover {
+                filter: drop-shadow(0 0 4px #ccc);
+            }
+
+            &.selected {
+                border-bottom: 4px solid var(--primary-m1);
+            }
+        }
+    }
+}

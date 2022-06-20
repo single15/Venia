@@ -1,11 +1,12 @@
 import React from 'react';
-import './header.scss';
 import { ReactComponent as Logo } from '../../assets/venia_logo.svg'
 import { ReactComponent as Hamburger } from '../../assets/hamburger.svg'
 import { ReactComponent as Search } from '../../assets/search.svg'
 import { ReactComponent as ShoppingBag } from '../../assets/shopping-bag.svg'
 import { ReactComponent as User } from '../../assets/user.svg'
 import Media from 'react-media';
+import { NavLink } from 'react-router-dom';
+import './header.scss';
 
 
 const Menus = () => <ul>
@@ -31,7 +32,7 @@ const Header = () => {
                                     </div>
                                     <div className='aem-GridColumn aem-GridColumn--phone--4 aem-GridColumn--tablet--4'>
                                         <Search />
-                                        <ShoppingBag />
+                                        <NavLink to="/cart"><ShoppingBag /></NavLink>
                                     </div>
                                 </div>
                             ) : (
@@ -47,7 +48,7 @@ const Header = () => {
                                     <div className='aem-GridColumn aem-GridColumn--default--4'>
                                         <div><Search /> Search</div>
                                         <div><User /> Sign In</div>
-                                        <div><ShoppingBag /></div>                                        
+                                        <div><NavLink to="/cart"><ShoppingBag /></NavLink></div>
                                     </div>
                                 </div>
                             )}

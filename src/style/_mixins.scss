@@ -7,7 +7,7 @@ $desktop-xl-width: 1920px;
 
 
 @mixin tablet {
-    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @media (min-width: #{$tablet-width +1 }) and (max-width: #{$desktop-width - 1px}) {
         @content;
     }
 }

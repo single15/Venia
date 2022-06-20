@@ -1,0 +1,32 @@
+.cart-item-section {
+    margin-top: 28px;
+    margin-bottom: 28px;
+
+    figure {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    .action-section {
+        div {
+            display: flex;
+            align-items: center;
+            padding-left: 36px;
+            margin-bottom: 8px;
+            cursor: pointer;
+
+
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    }
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './footer.scss';
 import { ABOUTUS_LINKS, ACCOUNT_LINKS, HELP_LINKS } from './utils';
 import { ReactComponent as Instagram } from '../../assets/instagram.svg'
 import { ReactComponent as Facebook } from '../../assets/facebook.svg'
 import { ReactComponent as Twitter } from '../../assets/twitter.svg'
 import { ReactComponent as Logo } from '../../assets/venia_logo.svg'
 import Media from 'react-media';
+import './footer.scss';
 
 
 const FooterBlock = ({ blockLable, links }) => (
@@ -14,7 +14,7 @@ const FooterBlock = ({ blockLable, links }) => (
         <div><b>{blockLable}</b></div>
         <ul>
             {links.map((link) =>
-                <li>
+                <li key={link.label}>
                     <Link to={link.to}>
                         {link.label}
                     </Link>

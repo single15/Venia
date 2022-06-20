@@ -1,0 +1,56 @@
+@import '../../style/mixins';
+
+
+@mixin desktop-tablet {
+    .product-info-section {
+        margin-top: 16px;
+
+        .product-info-description {
+            margin-right: 24px;
+        }
+    }
+}
+
+.product-info-section {
+    margin-top: 16px;
+
+    .block-header {
+        margin-bottom: 12px;
+        margin-top: 12px;
+    }
+
+    .product-info-details {
+        .aem-GridColumn {
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: 16px;
+            }
+        }
+
+        center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+
+    .horizontal-bar {
+        margin-top: 24px;
+    }
+}
+
+@include desktop {
+    @include desktop-tablet;
+
+    .product-info-details {
+        center {
+            justify-content: left !important;
+        }
+    }
+}
+
+@include tablet {
+    @include desktop-tablet;
+}

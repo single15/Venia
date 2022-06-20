@@ -1,0 +1,52 @@
+@import '../../style/mixins';
+
+@mixin desktop-tablet-view {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-left: 20px;
+    box-shadow: 0px 0px 8px #0000000D;
+}
+
+
+.price-summary-section {
+    margin: 16px 0;
+
+    .section-header {
+        font-weight: var(--unnamed-font-weight-bold);
+        margin-bottom: 16px;
+    }
+    
+    .aem-GridColumn {
+        .aem-Grid {
+            padding-bottom: 16px;
+
+            .aem-GridColumn--default--4 {
+                text-align: right;
+            }
+        }
+    }
+
+    .button-section {
+        text-align: center;
+
+        .btn {
+            width: 200px;
+
+            &:nth-child(1) {
+                margin: 20px auto;
+            }
+        }
+
+        img {
+            width: 200px;            
+        }
+    }
+
+    @include desktop {
+        @include desktop-tablet-view;
+    }
+
+    @include tablet {
+        @include desktop-tablet-view;
+    }
+}

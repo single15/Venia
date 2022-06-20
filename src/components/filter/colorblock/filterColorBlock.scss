@@ -1,0 +1,38 @@
+
+.filter-color-block {
+    padding: 16px 0;
+    border-bottom: 1px solid #ccc;
+
+    .options-section {
+        padding-top: 12px;
+
+        .color-option-wrapper {
+            position: relative;
+
+            .color-option {
+                cursor: pointer;
+                height: 40px;                
+                margin-right: 12px;
+                margin-bottom: 12px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+
+            .check-icon {
+                position: absolute;
+                display: none;
+                top: calc(50% - 12px);
+                left: calc(50% - 12px);
+                transform: translate(-30%, -20%);
+
+                svg {
+                    fill: #fff;
+                }
+
+                &.selected {
+                    display: block;
+                }
+            }
+        }
+    }
+}

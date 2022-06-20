@@ -1,0 +1,27 @@
+.offers-section {
+    margin-top: 16px;
+
+    .offer-item {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-bottom: none;
+
+        &:last-child {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .aem-Grid {
+            .aem-GridColumn {
+                &:nth-child(2) {
+                    text-align: right;
+                }
+            }
+        }
+
+        .desc {
+            margin-top: 4px;
+            font-size: var(--unnamed-font-size-12);
+            color: #777;
+        }
+    }
+}

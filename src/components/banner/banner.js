@@ -2,7 +2,7 @@ import React from 'react';
 import Media from 'react-media';
 import './banner.scss';
 
-const Banner = () => {
+const Banner = ({ label }) => {
 
     return (
 
@@ -14,7 +14,7 @@ const Banner = () => {
                             <div className='home-banner-image'></div>
                             <div className='home-banner-content'>
                                 <h2>
-                                    <span>Women's</span><br />
+                                    <span>{label}</span><br />
                                     <span>Outerwear</span>
                                 </h2>
                             </div>
@@ -24,7 +24,7 @@ const Banner = () => {
                             <div className='home-banner-content'>
                                 <div>
                                     <h2>
-                                        <span>Women's</span><br />
+                                        <span>{label}</span><br />
                                         <span>Outerwear</span>
                                     </h2>
                                 </div>

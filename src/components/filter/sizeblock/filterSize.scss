@@ -1,0 +1,17 @@
+.filter-size-block {
+    margin-top: 16px;
+    .size-block {
+        margin-right: 8px;
+        padding: 8px;
+        text-align: center;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        margin-top: 16px;
+
+        &.selected {
+            color: var(--white);
+            background-color: var(--primary-l1);
+            border-color: var(--primary-l1);
+        }
+    }
+}
