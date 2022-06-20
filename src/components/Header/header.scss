@@ -1,6 +1,6 @@
 .header-section {
     font-size: var(--unnamed-font-size-16);
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--gray-d1);
 
     .aem-Grid {
         display: flex;
@@ -41,6 +41,12 @@
                         li {
                             display: block;
                             padding-right: 16px;
+
+                            a {
+                                text-decoration: none;
+                                color: black;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }

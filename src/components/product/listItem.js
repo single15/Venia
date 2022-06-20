@@ -7,7 +7,7 @@ const ProductItem = (props) => {
     const { id, title, image, price } = props;
 
     return (
-        <NavLink key={id} to={`/product/${id}`}  className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--4 aem-GridColumn--phone--6 item-card">
+        <NavLink to={`/product/${id}`}  className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--4 aem-GridColumn--phone--6 item-card">
             <div className="card">
                 <figure>
                     <img src={image} alt={title} width={100}/>

@@ -30,33 +30,36 @@ const useQuery = () => {
 
 export default function ProductListPage() {
     const [products, setProducts] = useState([]);
-    const resultCount = useSelector(store => store.products.listCount);
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const cacheProducts = useSelector(store => store.products.list);
     const dispatch = useDispatch();
     const query = useQuery();
 
     useEffect(() => {
+        const category = query.get("category");
+        const page = query.get("pageNumber") || 1;
         if (cacheProducts.length > 0) {
-            setProducts(cacheProducts);
+            let filterProducts = category ? cacheProducts.filter((product) => product.category === category) : cacheProducts;
+            setProducts(getPageData(page, filterProducts));
+            setFilteredProducts(filterProducts);
         } else {
-            fetch('https://fakestoreapi.com/products')
+            fetch(`https://fakestoreapi.com/products`)
                 .then(res => res.json())
                 .then((data) => {
                     setProducts(data);
                     dispatch(updateProducts(data));
                 });
         }
-    }, [dispatch, cacheProducts])
+    }, [dispatch, cacheProducts, query])
 
 
-    useEffect(() => {
+    const getPageData = (pageNumber, products) => {
         let productArray = [];
-        const page = query.get("pageNumber");
-        for(let i = (page-1) * RECORDS_PER_PAGE; i < (page * RECORDS_PER_PAGE) && i < cacheProducts.length; i++) {
-            productArray.push(cacheProducts[i]);
+        for(let i = (pageNumber-1) * RECORDS_PER_PAGE; i < (pageNumber * RECORDS_PER_PAGE) && i < products.length; i++) {
+            productArray.push(products[i]);
         }
-        setProducts(productArray);
-    }, [cacheProducts, query])
+        return productArray;
+    }
 
     return (
         <article className='list-page'>
@@ -69,7 +72,7 @@ export default function ProductListPage() {
                                 <div className='component-container'>
                                     <Breadcrumb links={BREADCRUMB_LINKS} />
                                     <FilterMobile />
-                                    <ProductList products={products} />
+                                    <ProductList products={products} filteredProducts={filteredProducts} />
                                 </div>
                             </>
                             :
@@ -80,7 +83,7 @@ export default function ProductListPage() {
                                     </div>
                                     <div className='aem-Grid aem-Grid--12 aem-GridColumn aem-GridColumn--default--9'>
                                         <div className='aem-GridColumn aem-GridColumn--default--6'>
-                                            <b>{resultCount} Results</b>                                            
+                                            <b>{filteredProducts.length} Results</b>                                            
                                         </div>
                                         <div className='aem-GridColumn aem-GridColumn--default--6 sorting-filter'>
                                             <Dropdown options={SORT_OPTION} />
@@ -93,7 +96,7 @@ export default function ProductListPage() {
                                         <FilterDesktop />
                                     </div>
                                     <div className='aem-GridColumn aem-GridColumn--default--9'>
-                                        <ProductList products={products} />
+                                        <ProductList products={products} filteredProducts={filteredProducts} />
                                     </div>
                                 </div>
                             </div>

@@ -12,7 +12,7 @@
 
         .icon-wrapper {
             cursor: pointer;
-            border: 1px solid #91959C;
+            border: 1px solid var(--gray-l2);
             border-radius: 50%;
             width: 32px;
             height: 32px;
@@ -27,7 +27,7 @@
             height: 28px;
             border-radius: 8px;
             text-align: center;
-            border-color: #ccc;
+            border-color: var(--gray-d1);
             border-style: solid;        
         }
 

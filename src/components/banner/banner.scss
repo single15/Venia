@@ -2,7 +2,7 @@
 
 .home-banner-section-mb {
     .home-banner-content {
-        background-color: #1B252C;
+        background-color: var(--unnamed-color-1B252C);
         color: var(--white);
         width: 90%;
         margin: -60px auto;
@@ -42,7 +42,7 @@
             padding: 5rem !important;
             text-align: center;
             width: 100% !important;
-            background-color: #1B252C;
+            background-color: var(--unnamed-color-1B252C);
             color: var(--white);
             display: flex;
             align-items: center;

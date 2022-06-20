@@ -3,16 +3,15 @@ import Loader from "../loader/loader";
 import Pagination from "../pagination/pagination";
 import ProductItem from "./listItem";
 
-const ProductList = ({ products }) => (
+const ProductList = ({ products, filteredProducts }) => (
     <section className="product-list">
         {products.length ?
             <div className="aem-Grid aem-Grid--12">
-                {products.map((item) => <ProductItem {...item} />)}
+                {products.map((item) => <ProductItem key={item?.id} {...item} />)}
             </div>
             : <Loader />
         }
-
-        <Pagination />
+        <Pagination products={filteredProducts}/>
     </section>
 )
 

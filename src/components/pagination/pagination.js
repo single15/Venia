@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { ReactComponent as ChevronLeftIcon } from '../../assets/chevron-left.svg'
 import { ReactComponent as ChevronRightIcon } from '../../assets/chevron-right.svg'
 import { setCurrentPage } from "../../reducer/product";
-
 import './pagination.scss';
 
 export const RECORDS_PER_PAGE = 9;
@@ -19,10 +18,10 @@ const RenderPageNumbers = ({ pages, currentPage }) => {
     return <>{pageArray.map((page) => <div key={page} className={`page-num-block ${currentPage === page ? 'selected-page' : ''}`}>{page}</div>)}</>;
 }
 
-const Pagination = () => {
+const Pagination = ({ products }) => {
     const [showPrev, togglePrev] = useState(false);
-    const [showNext, toggleNext] = useState(true);
-    const length = useSelector(store => store.products.listCount);
+    const [showNext, toggleNext] = useState(false);
+    const length = products.length;
     const currentPage = useSelector(store => store.products.currentPage);
 
     const dispatch = useDispatch();
@@ -62,6 +61,10 @@ const Pagination = () => {
     useEffect(() => {
         navigate(`/product/list?pageNumber=${currentPage}`, { replace: true });
     }, [currentPage, navigate]);
+
+    useEffect(() => {
+        toggleNext(length > 9);
+    }, [length])
 
     return (
         <section className="pagination-section">

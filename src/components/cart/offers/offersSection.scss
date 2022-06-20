@@ -3,11 +3,11 @@
 
     .offer-item {
         padding: 12px;
-        border: 1px solid #ccc;
+        border: 1px solid var(--gray-d1);
         border-bottom: none;
 
         &:last-child {
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid var(--gray-d1);
         }
 
         .aem-Grid {
@@ -21,7 +21,7 @@
         .desc {
             margin-top: 4px;
             font-size: var(--unnamed-font-size-12);
-            color: #777;
+            color: var(--gray-d1);
         }
     }
 }

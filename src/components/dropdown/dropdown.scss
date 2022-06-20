@@ -7,7 +7,7 @@
         padding: 4px 12px;
         border-radius: 8px;
         height: 32px;
-        border-color: #B5B7BC;
+        border-color: var(--gray-l2);
         background-color: var(--white);
         outline: none;
         box-shadow: none;
@@ -20,7 +20,7 @@
 
         &:focus,
         &:focus-visible {
-            box-shadow: 0px 0px 2px 2px #3D84FFBF;
+            box-shadow: 0px 0px 2px 2px var(--primary-l1);
             outline: none;
         }
     }
@@ -33,7 +33,7 @@
 
         .option-item {
             padding: 8px 16px;
-            border: 1px solid #ccc;
+            border: 1px solid var(--gray-d1);
             border-bottom: none;
 
             &:first-child {
@@ -42,7 +42,7 @@
             }
 
             &:last-child {
-                border-bottom: 1px solid #ccc;
+                border-bottom: 1px solid var(--gray-d1);
             }
         }
     }

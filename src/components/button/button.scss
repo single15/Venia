@@ -24,7 +24,7 @@
         }
 
         &:focus {
-            border-color: #3D84FFBF;
+            border-color: var(--primary-l1);
         }
 
         &:disabled {
@@ -44,7 +44,7 @@
         }
 
         &:focus {
-            border: 4px solid #3D84FFBF;
+            border: 4px solid var(--primary-l1);
         }
 
         &:disabled {

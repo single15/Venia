@@ -2,8 +2,8 @@
 
 .footer-section {
     article {
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
+        border-top: 1px solid var(--gray-d1);
+        border-bottom: 1px solid var(--gray-d1);
 
         &:nth-child(1) {
             padding: 60px 16px;
@@ -40,7 +40,7 @@
 
                 a {
                     text-decoration: none;
-                    color: #444;
+                    color: var(--gray-d1);
                 }
             }
         }
