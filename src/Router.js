@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "App";
 import Loader from "components/loader/loader";
 
-const HomePage = React.lazy(() => import("pages/home/homePage"));
-const ProductDetailPage = React.lazy(() => import("pages/product/productDetailPage"));
-const ProductListPage = React.lazy(() => import("pages/product/productListPage"));
-const CartPage = React.lazy(() => import("pages/cart/cartPage"));
+const HomePage = React.lazy(() => import("./pages/home/homePage"));
+const ProductDetailPage = React.lazy(() => import("./pages/product/productDetailPage"));
+const ProductListPage = React.lazy(() => import("./pages/product/productListPage"));
+const CartPage = React.lazy(() => import("./pages/cart/cartPage"));
 
 
 const Router = () => (
