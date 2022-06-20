@@ -2,7 +2,7 @@
   "name": "venia",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://single15.github.io/Venia/public/index.html",
+  "homepage": ".",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "cra-template": "1.1.3",
@@ -45,9 +45,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "sass": "^1.52.3"
   },
   "engines": {
     "node": "16.13.1",
