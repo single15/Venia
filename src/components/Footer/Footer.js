@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ABOUTUS_LINKS, ACCOUNT_LINKS, HELP_LINKS } from './utils';
-import { ReactComponent as Instagram } from '../../assets/instagram.svg'
-import { ReactComponent as Facebook } from '../../assets/facebook.svg'
-import { ReactComponent as Twitter } from '../../assets/twitter.svg'
-import { ReactComponent as Logo } from '../../assets/venia_logo.svg'
+import { ABOUTUS_LINKS, ACCOUNT_LINKS, HELP_LINKS } from 'components/footer/utils';
+import { ReactComponent as Instagram } from 'assets/instagram.svg'
+import { ReactComponent as Facebook } from 'assets/facebook.svg'
+import { ReactComponent as Twitter } from 'assets/twitter.svg'
+import { ReactComponent as Logo } from 'assets/venia_logo.svg'
 import Media from 'react-media';
-import './footer.scss';
+import 'components/footer/footer.scss';
 
 
 const FooterBlock = ({ blockLable, links }) => (

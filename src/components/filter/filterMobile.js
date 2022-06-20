@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { ReactComponent as FilterIcon } from '../../assets/sliders.svg'
-import { ReactComponent as ArrowUp } from '../../assets/arrow-up.svg'
-import { ReactComponent as ArrowDown } from '../../assets/arrow-down.svg'
-import './filter.scss';
+import { ReactComponent as FilterIcon } from 'assets/sliders.svg'
+import { ReactComponent as ArrowUp } from 'assets/arrow-up.svg'
+import { ReactComponent as ArrowDown } from 'assets/arrow-down.svg'
+import 'components/filter/filter.scss';
 import { useSelector } from "react-redux";
-import FilterModal from "./modal/filterModal";
+import FilterModal from "components/filter/modal/filterModal";
 
 
 

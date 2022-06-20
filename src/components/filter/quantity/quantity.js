@@ -1,7 +1,7 @@
 import React from "react";
-import { ReactComponent as MinusIcon } from '../../../assets/minus.svg'
-import { ReactComponent as PlusIcon } from '../../../assets/plus.svg'
-import './quantity.scss';
+import { ReactComponent as MinusIcon } from 'assets/minus.svg'
+import { ReactComponent as PlusIcon } from 'assets/plus.svg'
+import 'components/filter/quantity/quantity.scss';
 
 const Quantity = ({ quantity, updateQuantity, showLabel, small }) => {
     return (

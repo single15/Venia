@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Button from "../button/button";
-import paypal from '../../assets/images/paypal-link.png';
-import { ReactComponent as LockIcon } from '../../assets/lock.svg'
-import './pricesummary.scss';
+import Button from "components/button/button";
+import paypal from 'assets/images/paypal-link.png';
+import { ReactComponent as LockIcon } from 'assets/lock.svg'
+import 'components/pricesummary/pricesummary.scss';
 import { useSelector } from "react-redux";
 
 const getPrice = (isFree, isDiscount, price) => isFree ? 'FREE' : isDiscount ? `- $ ${price?.toFixed(2)}` : `$ ${price?.toFixed(2)}`;

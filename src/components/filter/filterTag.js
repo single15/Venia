@@ -1,5 +1,5 @@
 import React from "react";
-import {ReactComponent as Close} from '../../assets/white_close.svg';
+import {ReactComponent as Close} from 'assets/white_close.svg';
 
 
 const Tag = ({ item }) => (

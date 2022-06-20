@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import Media from "react-media";
 import { useNavigate, useParams } from "react-router-dom";
-import Breadcrumb from "../../components/breadcrumb/breadcrumb";
-import FilterColorBlock from "../../components/filter/colorblock/filterColorBlock";
-import Quantity from "../../components/filter/quantity/quantity";
-import FilterSizeBlock from "../../components/filter/sizeblock/filterSize";
-import ProductHeader from "../../components/product/header/productHeader";
-import { BREADCRUMB_LINKS } from "../utils";
-import Loader from './../../components/loader/loader';
-import { ReactComponent as WhishlistIcon } from '../../assets/heart.svg';
-import { ReactComponent as ShareIcon } from '../../assets/share-2.svg';
-import './productDetailPage.scss';
-import Button from "../../components/button/button";
-import ButtonLink from "../../components/button/buttonLink";
-import ProductInfo from "../../components/product/productInfo";
-import { addToCart } from "../../reducer/cart";
+import Breadcrumb from "components/breadcrumb/breadcrumb";
+import FilterColorBlock from "components/filter/colorblock/filterColorBlock";
+import Quantity from "components/filter/quantity/quantity";
+import FilterSizeBlock from "components/filter/sizeblock/filterSize";
+import ProductHeader from "components/product/header/productHeader";
+import { BREADCRUMB_LINKS } from "pages/utils";
+import Loader from 'components/loader/loader';
+import { ReactComponent as WhishlistIcon } from 'assets/heart.svg';
+import { ReactComponent as ShareIcon } from 'assets/share-2.svg';
+import Button from "components/button/button";
+import ButtonLink from "components/button/buttonLink";
+import ProductInfo from "components/product/productInfo";
+import { addToCart } from "reducer/cart";
 import { useDispatch } from "react-redux";
-import Gallery from "../../components/product/gallery/gallery";
+import Gallery from "components/product/gallery/gallery";
+import 'pages/product/productDetailPage.scss';
 
 
 

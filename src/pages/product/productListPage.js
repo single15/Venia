@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import Media from 'react-media';
 import { useDispatch, useSelector } from 'react-redux';
-import Banner from '../../components/banner/banner';
-import Breadcrumb from '../../components/breadcrumb/breadcrumb';
-import FilterMobile from '../../components/filter/filterMobile';
-import ProductList from '../../components/product/list';
-import { BREADCRUMB_LINKS } from '../utils';
-import { updateProducts } from '../../reducer/product';
-import './listPage.scss';
-import FilterDesktop from '../../components/filter/filterDesktop';
-import Dropdown from '../../components/dropdown/dropdown';
+import Banner from 'components/banner/banner';
+import Breadcrumb from 'components/breadcrumb/breadcrumb';
+import FilterMobile from 'components/filter/filterMobile';
+import ProductList from 'components/product/list';
+import { BREADCRUMB_LINKS } from 'pages/utils';
+import { updateProducts } from 'reducer/product';
+import FilterDesktop from 'components/filter/filterDesktop';
+import Dropdown from 'components/dropdown/dropdown';
 import { useLocation } from 'react-router-dom';
-import { RECORDS_PER_PAGE } from '../../components/pagination/pagination';
+import { RECORDS_PER_PAGE } from 'components/pagination/pagination';
+import 'pages/product/listPage.scss';
 
 
 const SORT_OPTION = [ 

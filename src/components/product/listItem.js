@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { ReactComponent as WishlistIcon } from '../../assets/heart.svg'
-import './listItem.scss';
+import { ReactComponent as WishlistIcon } from 'assets/heart.svg'
+import 'components/product/listItem.scss';
 
 const ProductItem = (props) => {
     const { id, title, image, price } = props;

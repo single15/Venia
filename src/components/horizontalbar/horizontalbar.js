@@ -1,5 +1,5 @@
 import React from "react";
-import './horizontalbar.scss';
+import 'components/horizontalbar/horizontalbar.scss';
 
 
 const HorizontalBar = () => {

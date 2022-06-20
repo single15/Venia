@@ -1,14 +1,13 @@
 import React from "react";
 import Media from "react-media";
-import Quantity from "../../filter/quantity/quantity";
-import { ReactComponent as HeartIcon } from '../../../assets/heart.svg'
-import { ReactComponent as PencilIcon } from '../../../assets/edit-2.svg'
-import { ReactComponent as TrashIcon } from '../../../assets/trash-2.svg'
-
-import './cartItem.scss';
+import Quantity from "components/filter/quantity/quantity";
+import { ReactComponent as HeartIcon } from 'assets/heart.svg'
+import { ReactComponent as PencilIcon } from 'assets/edit-2.svg'
+import { ReactComponent as TrashIcon } from 'assets/trash-2.svg'
 import { NavLink } from "react-router-dom";
-import { addToCart, removeCart } from "../../../reducer/cart";
+import { addToCart, removeCart } from "reducer/cart";
 import { useDispatch } from "react-redux";
+import 'components/cart/cartItem/cartItem.scss';
 
 const SelectedFeature = ({ label, value }) => (
     <div>

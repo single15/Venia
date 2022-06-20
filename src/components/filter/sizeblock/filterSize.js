@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { SIZE_FILTER } from "../utils";
-import './filterSize.scss';
+import { SIZE_FILTER } from "components/filter/utils";
+import 'components/filter/sizeblock/filterSize.scss';
 
 
 const Block = ({ size, onClick, selected }) => {

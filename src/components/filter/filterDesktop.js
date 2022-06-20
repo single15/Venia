@@ -1,7 +1,7 @@
 import React from "react";
-import FilterBlock from "./filterBlock";
-import FilterColorBlock from "./colorblock/filterColorBlock";
-import { BRAND_FILTER, SIZE_FILTER, STYLE_FILTER } from "./utils";
+import FilterBlock from "components/filter/filterBlock";
+import FilterColorBlock from "components/filter/colorblock/filterColorBlock";
+import { BRAND_FILTER, SIZE_FILTER, STYLE_FILTER } from "components/filter/utils";
 
 
 const FilterDesktop = () => {

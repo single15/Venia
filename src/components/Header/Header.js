@@ -1,12 +1,12 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../../assets/venia_logo.svg'
-import { ReactComponent as Hamburger } from '../../assets/hamburger.svg'
-import { ReactComponent as Search } from '../../assets/search.svg'
-import { ReactComponent as ShoppingBag } from '../../assets/shopping-bag.svg'
-import { ReactComponent as User } from '../../assets/user.svg'
+import { ReactComponent as Logo } from 'assets/venia_logo.svg'
+import { ReactComponent as Hamburger } from 'assets/hamburger.svg'
+import { ReactComponent as Search } from 'assets/search.svg'
+import { ReactComponent as ShoppingBag } from 'assets/shopping-bag.svg'
+import { ReactComponent as User } from 'assets/user.svg'
 import Media from 'react-media';
 import { NavLink } from 'react-router-dom';
-import './header.scss';
+import 'components/header/header.scss';
 
 
 const Menus = () => (

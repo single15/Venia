@@ -1,12 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import CartItem from "../../components/cart/cartItem/cartItem";
-import Offers from "../../components/cart/offers/offersSection";
-import HorizontalBar from "../../components/horizontalbar/horizontalbar";
-import PriceSummary from "../../components/pricesummary/pricesummary";
-import RecentlyViewed from "../../components/recentlyviewed/recently_viewed";
-import './cartpage.scss';
+import CartItem from "components/cart/cartItem/cartItem";
+import Offers from "components/cart/offers/offersSection";
+import HorizontalBar from "components/horizontalbar/horizontalbar";
+import PriceSummary from "components/pricesummary/pricesummary";
+import RecentlyViewed from "components/recentlyviewed/recently_viewed";
+import 'pages/cart/cartpage.scss';
 
 
 const CartPage = () => {

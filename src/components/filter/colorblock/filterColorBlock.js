@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ReactComponent as CheckIcon } from '../../../assets/check.svg';
-import './filterColorBlock.scss';
+import { ReactComponent as CheckIcon } from 'assets/check.svg';
+import 'components/filter/colorblock/filterColorBlock.scss';
 
 const COLOR_OPTIONS = [
     { label: 'Black', color: '#000000' },

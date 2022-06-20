@@ -1,7 +1,7 @@
 import React from "react";
-import Loader from "../loader/loader";
-import Pagination from "../pagination/pagination";
-import ProductItem from "./listItem";
+import Loader from "components/loader/loader";
+import Pagination from "components/pagination/pagination";
+import ProductItem from "components/product/listItem";
 
 const ProductList = ({ products, filteredProducts }) => (
     <section className="product-list">

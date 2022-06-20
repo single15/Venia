@@ -1,10 +1,10 @@
 import React from "react";
-import { ReactComponent as FeatherIcon } from '../../assets/feather.svg';
-import { ReactComponent as LayersIcon } from '../../assets/layers.svg';
-import { ReactComponent as WindIcon } from '../../assets/wind.svg';
-import { ReactComponent as CloudSnowIcon } from '../../assets/cloud-snow.svg';
-import HorizontalBar from "../horizontalbar/horizontalbar";
-import './productInfo.scss';
+import { ReactComponent as FeatherIcon } from 'assets/feather.svg';
+import { ReactComponent as LayersIcon } from 'assets/layers.svg';
+import { ReactComponent as WindIcon } from 'assets/wind.svg';
+import { ReactComponent as CloudSnowIcon } from 'assets/cloud-snow.svg';
+import HorizontalBar from "components/horizontalbar/horizontalbar";
+import 'components/product/productInfo.scss';
 
 
 const ProductInfo = ({ item }) => (

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Banner from '../../components/banner/banner';
+import Banner from 'components/banner/banner';
 
 export default function HomePage() {
     const navigate = useNavigate();

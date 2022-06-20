@@ -1,6 +1,6 @@
 import React from 'react';
 import Media from 'react-media';
-import './banner.scss';
+import 'components/banner/banner.scss';
 
 const Banner = ({ label }) => {
 

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { ReactComponent as Chevrondown } from '../../assets/chevron-down.svg';
-import { ReactComponent as Chevronup } from '../../assets/chevron-up.svg';
-import './dropdown.scss';
-import Option from "./option";
+import { ReactComponent as Chevrondown } from 'assets/chevron-down.svg';
+import { ReactComponent as Chevronup } from 'assets/chevron-up.svg';
+import 'components/dropdown/dropdown.scss';
+import Option from "components/dropdown/option";
 
 const Dropdown = ({ label, options }) => {
     const [selectedItem, setSelectedItem] = useState('Latest');

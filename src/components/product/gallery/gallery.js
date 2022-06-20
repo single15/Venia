@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Media from "react-media";
-import './gallery.scss';
+import 'components/product/gallery/gallery.scss';
 
 const ImagesOption = ({ source, title, selected, handleClick }) => (
     <div className={`option ${selected ? 'selected' : ''}`} onClick={handleClick}>

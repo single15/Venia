@@ -1,7 +1,7 @@
 import React from "react";
-import './productHeader.scss';
-import { ReactComponent as StarIcon } from '../../../assets/star.svg';
-import { ReactComponent as FillStarIcon } from '../../../assets/fill-star.svg';
+import { ReactComponent as StarIcon } from 'assets/star.svg';
+import { ReactComponent as FillStarIcon } from 'assets/fill-star.svg';
+import 'components/product/header/productHeader.scss';
 
 
 const Star = ({ rate }) => {

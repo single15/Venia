@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import cart from "./cart";
-import filterReducer from "./filter";
-import products from "./product";
-import wishlist from "./wishlist";
+import cart from "reducer/cart";
+import filterReducer from "reducer/filter";
+import products from "reducer/product";
+import wishlist from "reducer/wishlist";
 
 const reducer = combineReducers({
     products,

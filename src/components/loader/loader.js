@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { BallTriangle } from 'react-loader-spinner'
-import './loader.scss'
+import 'components/loader/loader.scss'
 
 const Loader = () => {
     useEffect(() => {

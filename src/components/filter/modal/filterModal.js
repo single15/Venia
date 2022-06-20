@@ -1,11 +1,11 @@
 import React from "react";
 import Modal from 'react-modal';
-import FilterBlock from "../filterBlock";
-import FilterColorBlock from "../colorblock/filterColorBlock";
-import './filterModal.scss';
-import { BRAND_FILTER, SIZE_FILTER, STYLE_FILTER } from "../utils";
-import {ReactComponent as Close} from '../../../assets/close.svg';
-import FilterTag from "../filterTag"
+import FilterBlock from "components/filter/filterBlock";
+import FilterColorBlock from "components/filter/colorblock/filterColorBlock";
+import { BRAND_FILTER, SIZE_FILTER, STYLE_FILTER } from "components/filter/utils";
+import {ReactComponent as Close} from 'assets/close.svg';
+import FilterTag from "components/filter/filterTag"
+import 'components/filter/modal/filterModal.scss';
 
 
 const FilterModal = ({ open, closeModal }) => {

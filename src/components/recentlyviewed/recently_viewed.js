@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { NavLink } from "react-router-dom";
-import Loader from '../loader/loader';
-
-import './recently_viewed.scss';
+import Loader from 'components/loader/loader';
+import 'components/recentlyviewed/recently_viewed.scss';
 
 
 const responsive = {
