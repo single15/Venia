@@ -1,13 +1,13 @@
 .offers-section {
-    margin-top: 16px;
+    margin-top: var(--unnamed-pixel-16);
 
     .offer-item {
-        padding: 12px;
-        border: 1px solid var(--gray-d1);
+        padding: var(--unnamed-pixel-12);
+        border: var(--unnamed-border-solid);
         border-bottom: none;
 
         &:last-child {
-            border-bottom: 1px solid var(--gray-d1);
+            border-bottom: var(--unnamed-border-solid);
         }
 
         .aem-Grid {
@@ -19,7 +19,7 @@
         }
 
         .desc {
-            margin-top: 4px;
+            margin-top: var(--unnamed-pixel-4);
             font-size: var(--unnamed-font-size-12);
             color: var(--gray-d1);
         }

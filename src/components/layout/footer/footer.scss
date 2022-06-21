@@ -2,11 +2,11 @@
 
 .footer-section {
     article {
-        border-top: 1px solid var(--gray-d1);
-        border-bottom: 1px solid var(--gray-d1);
+        border-top: var(--unnamed-border-solid);
+        border-bottom: var(--unnamed-border-solid);
 
         &:nth-child(1) {
-            padding: 60px 16px;
+            padding: 60px var(--unnamed-pixel-16);
         }
 
         &:nth-child(2) {
@@ -17,7 +17,7 @@
                 text-align: center;
 
                 a {
-                    margin-left: 16px;
+                    margin-left: var(--unnamed-pixel-16);
                     color: black;
                 }
 
@@ -36,7 +36,7 @@
 
             li {
                 display: block;
-                margin-bottom: 8px;
+                margin-bottom: var(--unnamed-pixel-8);
 
                 a {
                     text-decoration: none;
@@ -46,12 +46,12 @@
         }
 
         .followus-info {
-            margin: 16px 0;
+            margin: var(--unnamed-pixel-16) 0;
         }
 
         .social-links {
             svg {
-                padding-right: 16px;
+                padding-right: var(--unnamed-pixel-16);
             }
         }
     }

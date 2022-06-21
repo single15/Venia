@@ -9,13 +9,13 @@
             align-items: center;
             justify-content: space-between;
             font-weight: var(--unnamed-font-weight-bold);
-            padding: 16px;
+            padding: var(--unnamed-pixel-16);
             background-color: var(--gray-l1);
-            border-bottom: 1px solid var(--gray-d1);
+            border-bottom: var(--unnamed-border-solid);
         }
 
         .modal-content {
-            padding: 20px;
+            padding: var(--unnamed-pixel-20);
         }
     }
 }

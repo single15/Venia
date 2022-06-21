@@ -1,12 +1,13 @@
 .filter-size-block {
-    margin-top: 16px;
+    margin-top: var(--unnamed-pixel-16);
     .size-block {
-        margin-right: 8px;
-        padding: 8px;
+        margin-right: var(--unnamed-pixel-8);
+        padding: var(--unnamed-pixel-8);
         text-align: center;
-        border: 2px solid var(--gray-d1);
-        border-radius: 8px;
-        margin-top: 16px;
+        border: var(--unnamed-border-solid);
+        border-width: var(--unnamed-pixel-2);
+        border-radius: var(--unnamed-pixel-8);
+        margin-top: var(--unnamed-pixel-16);
 
         &.selected {
             color: var(--white);

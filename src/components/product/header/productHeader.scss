@@ -1,10 +1,10 @@
 .product-header-section {
-    border-bottom: 1px solid var(--gray-d1);
-    padding-bottom: 12px;
+    border-bottom: var(--unnamed-border-solid);
+    padding-bottom: var(--unnamed-pixel-12);
 
 
     div {
-        margin-bottom: 8px;
+        margin-bottom: var(--unnamed-pixel-8);
     }
 
     .rating-section {
@@ -12,7 +12,7 @@
         align-items: center;
 
         svg {
-            margin-right: 2px;
+            margin-right: var(--unnamed-pixel-2);
         }
     }
 }

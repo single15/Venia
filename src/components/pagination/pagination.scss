@@ -1,6 +1,6 @@
 .pagination-section {
     width: 60%;
-    margin: 24px auto;
+    margin: var(--unnamed-pixel-24) auto;
 
     .selected-page {
         text-decoration: underline;
@@ -10,7 +10,7 @@
     .action-button {
         text-align: center;
         width: 52px !important;
-        height: 20px;
+        height: var(--unnamed-pixel-20);
         cursor: pointer;
     }
 
@@ -19,7 +19,7 @@
         justify-content: center;
 
         .page-num-block {
-            padding: 0 10px;
+            padding: 0 var(--unnamed-pixel-10);
         }
     }
 }

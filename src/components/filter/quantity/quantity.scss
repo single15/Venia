@@ -1,21 +1,21 @@
 @import 'style/mixins';
 
 .quantity-section {
-    margin-top: 16px;
+    margin-top: var(--unnamed-pixel-16);
 
     .count-wrapper {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         width: 80%;
-        margin: 16px auto;
+        margin: var(--unnamed-pixel-16) auto;
 
         .icon-wrapper {
             cursor: pointer;
-            border: 1px solid var(--gray-l2);
+            border: var(--unnamed-border-solid);
             border-radius: 50%;
-            width: 32px;
-            height: 32px;
+            width: var(--unnamed-pixel-32);
+            height: var(--unnamed-pixel-32);
 
             display: flex;
             align-items: center;
@@ -24,11 +24,10 @@
 
         input {
             width: 90px;
-            height: 28px;
-            border-radius: 8px;
+            height: var(--unnamed-pixel-28);
+            border-radius: var(--unnamed-pixel-8);
             text-align: center;
-            border-color: var(--gray-d1);
-            border-style: solid;        
+            border: var(--unnamed-border-solid);
         }
 
 
@@ -37,7 +36,7 @@
             width: 100%;
 
             div {
-                margin-right: 16px;
+                margin-right: var(--unnamed-pixel-16);
             }
         }
     }
@@ -45,13 +44,13 @@
     &.sm {
         .count-wrapper {
             .icon-wrapper {
-                width: 24px;
-                height: 24px;
+                width: var(--unnamed-pixel-24);
+                height: var(--unnamed-pixel-24);
             }
     
             input {
                 width: 74px;
-                height: 24px;  
+                height: var(--unnamed-pixel-24);  
             }
         }
     }

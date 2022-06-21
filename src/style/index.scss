@@ -10,10 +10,10 @@ body {
 
     @include desktop {
         width: 80%;
-        margin: 16px auto;
+        margin: var(--unnamed-pixel-16) auto;
     }
 
     .component-container {
-        padding: 16px;
+        padding: var(--unnamed-pixel-16);
     }
 }

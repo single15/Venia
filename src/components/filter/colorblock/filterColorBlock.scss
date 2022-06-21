@@ -1,21 +1,21 @@
 
 .filter-color-block {
-    padding: 16px 0;
-    border-bottom: 1px solid var(--gray-d1);
+    padding: var(--unnamed-pixel-16) 0;
+    border-bottom: var(--unnamed-border-solid);
 
     .options-section {
-        padding-top: 12px;
+        padding-top: var(--unnamed-pixel-12);
 
         .color-option-wrapper {
             position: relative;
 
             .color-option {
                 cursor: pointer;
-                height: 40px;                
-                margin-right: 12px;
-                margin-bottom: 12px;
-                border-radius: 5px;
-                border: 1px solid var(--gray-d1);
+                height: var(--unnamed-pixel-40);                
+                margin-right: var(--unnamed-pixel-12);
+                margin-bottom: var(--unnamed-pixel-12);
+                border-radius: var(--unnamed-pixel-4);
+                border: var(--unnamed-border-solid);
             }
 
             .check-icon {

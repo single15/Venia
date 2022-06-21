@@ -1,6 +1,6 @@
 .header-section {
     font-size: var(--unnamed-font-size-16);
-    border-bottom: 1px solid var(--gray-d1);
+    border-bottom: var(--unnamed-border-solid);
 
     .aem-Grid {
         display: flex;
@@ -20,7 +20,7 @@
                     text-align: right;
     
                     svg:nth-child(1) {
-                        padding-right: 24px;
+                        padding-right: var(--unnamed-pixel-24);
                     }
                 }
             }
@@ -40,7 +40,7 @@
                         justify-content: center;
                         li {
                             display: block;
-                            padding-right: 16px;
+                            padding-right: var(--unnamed-pixel-16);
 
                             a {
                                 text-decoration: none;
@@ -61,11 +61,11 @@
                         position: relative;
                         
                         &:not(:last-child) {
-                            padding-right: 24px;
+                            padding-right: var(--unnamed-pixel-24);
                         }
 
                         svg {
-                            padding-right: 4px;
+                            padding-right: var(--unnamed-pixel-4);
                         }
                     }
                 }

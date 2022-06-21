@@ -4,9 +4,9 @@
 
     .selected-item {
         min-width: 200px;
-        padding: 4px 12px;
-        border-radius: 8px;
-        height: 32px;
+        padding: var(--unnamed-pixel-4) var(--unnamed-pixel-12);
+        border-radius: var(--unnamed-pixel-8);
+        height: var(--unnamed-pixel-32);
         border-color: var(--gray-l2);
         background-color: var(--white);
         outline: none;
@@ -29,20 +29,20 @@
         width: 100%;
         position: absolute;
         background-color: var(--white);
-        margin-top: 8px;
+        margin-top: var(--unnamed-pixel-8);
 
         .option-item {
-            padding: 8px 16px;
-            border: 1px solid var(--gray-d1);
+            padding: var(--unnamed-pixel-8) var(--unnamed-pixel-16);
+            border: var(--unnamed-border-solid);
             border-bottom: none;
 
             &:first-child {
-                border-top-left-radius: 4px;
-                border-top-right-radius: 4px;
+                border-top-left-radius: var(--unnamed-pixel-4);
+                border-top-right-radius: var(--unnamed-pixel-4);
             }
 
             &:last-child {
-                border-bottom: 1px solid var(--gray-d1);
+                border-bottom: var(--unnamed-border-solid);
             }
         }
     }

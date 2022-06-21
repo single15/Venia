@@ -1,6 +1,6 @@
 .cart-item-section {
-    margin-top: 28px;
-    margin-bottom: 28px;
+    margin-top: var(--unnamed-pixel-28);
+    margin-bottom: var(--unnamed-pixel-28);
 
     figure {
         margin: 0;
@@ -16,8 +16,8 @@
         div {
             display: flex;
             align-items: center;
-            padding-left: 36px;
-            margin-bottom: 8px;
+            padding-left: var(--unnamed-pixel-36);
+            margin-bottom: var(--unnamed-pixel-8);
             cursor: pointer;
 
 
