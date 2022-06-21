@@ -19,11 +19,11 @@ const FilterModal = ({ open, closeModal }) => {
                 </div>
             </div>
             <div className="modal-content">
-            <FilterTag />
-            <FilterColorBlock />
-            <FilterBlock blockLabel={"Size"} options={SIZE_FILTER} />
-            <FilterBlock blockLabel={"Style"} options={STYLE_FILTER} />
-            <FilterBlock blockLabel={"Brand"} options={BRAND_FILTER} />
+                <FilterTag selectedFilter={['Black']} />
+                <FilterColorBlock />
+                <FilterBlock blockLabel={"Size"} options={SIZE_FILTER} />
+                <FilterBlock blockLabel={"Style"} options={STYLE_FILTER} />
+                <FilterBlock blockLabel={"Brand"} options={BRAND_FILTER} />
             </div>
         </Modal>
     )

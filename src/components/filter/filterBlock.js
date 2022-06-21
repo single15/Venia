@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const FilterBlock = ({ blockLabel, options }) => {
+const FilterBlock = ({ blockLabel, options, setFilterValue, selectedFilter }) => {
     const [seeMoreToggle, setSeeMoreToggle] = React.useState(false);
     const showingOptions = seeMoreToggle ? options : options.slice(0, 5);
 
@@ -12,7 +12,7 @@ const FilterBlock = ({ blockLabel, options }) => {
                 {showingOptions?.map((option) =>
                     <React.Fragment key={option.id}>
                         <div className="option-checkbox">
-                            <input type="checkbox" id={option.id} name={option.id} value={option.value} />
+                            <input type="checkbox" id={option.id} name={option.id} value={option.value} checked={selectedFilter.includes(option.value)} onChange={() => setFilterValue(option.value)} />
                             <label htmlFor={option.id}>{option.value}</label>
                         </div>
                     </React.Fragment>

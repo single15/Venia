@@ -8,14 +8,15 @@ const Tag = ({ item }) => (
     </div>
 )
 
-const FilterTags = () => {
-    const selectedFilter = ['Black'];
+const FilterTags = ({ selectedFilter = [], clearFilter }) => {    
     return (
         <>
             {selectedFilter.length > 0 &&
                 <div className="filter-selection-block">
-                    {selectedFilter.map((item, index) => <Tag key={item + index} item={item} />)}
-                    <span>Clear all</span>
+                    <div className="selected-item-block">
+                        {selectedFilter.map((item, index) => <Tag key={item + index} item={item} />)}
+                    </div>                    
+                    <div className="clear-link" onClick={clearFilter}>Clear all</div>
                 </div>
             }
         </>
