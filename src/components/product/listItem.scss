@@ -9,7 +9,7 @@
     text-decoration: none;
     color: var(--black);
 
-    
+
 
     &:nth-child(even),
     &:nth-child(odd) {
@@ -28,10 +28,6 @@
         margin-bottom: var(--unnamed-pixel-16);
     }
 
-    div {
-        padding-bottom: var(--unnamed-pixel-8);
-    }
-
     .card {
         padding: var(--unnamed-pixel-16);
         border: var(--unnamed-border-solid);
@@ -39,6 +35,15 @@
         &:hover {
             transition: ease-in all 0.3s;
             box-shadow: 0px 0px var(--unnamed-pixel-4) var(--unnamed-pixel-2) var(--gray-l1);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--black);
+            
+            div {
+                padding-bottom: var(--unnamed-pixel-8);
+            }
         }
     }
 }

@@ -23,7 +23,7 @@ const addItemToCart = (state, action) => {
             }
         });
     }
-    return { ...state, cart: items, cartCount: state.cart.length };
+    return { ...state, cart: items, cartCount: items.length };
 }
 
 const removeItemFromCart = (state, action) => {

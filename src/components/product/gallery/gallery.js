@@ -3,8 +3,11 @@ import Media from "react-media";
 import 'components/product/gallery/gallery.scss';
 
 const ImagesOption = ({ source, title, selected, handleClick }) => (
-    <div className={`option ${selected ? 'selected' : ''}`} onClick={handleClick}>
-        <img src={source} alt={title} width={60} />
+    <div className="option-img-block" onClick={handleClick}>
+        <div className={`option ${selected ? 'selected' : ''}`}>
+            <img src={source} alt={title} width={60} />
+        </div>
+        <div className={`option-overlay ${selected ? 'selected' : ''}`}></div>
     </div>
 )
 
@@ -19,7 +22,7 @@ const DUMMY_ARRAY = [
 const Gallery = ({ source, title }) => {
     const [selectedImg, setImage] = useState(1);
     const [images, setImagesOptions] = useState(DUMMY_ARRAY);
-    
+
     useEffect(() => {
         let dummyArray = DUMMY_ARRAY.map((item) => {
             return {
@@ -61,7 +64,7 @@ const Gallery = ({ source, title }) => {
                                     <div className="action-wrapper prev" onClick={prev}></div>
                                     <div className="action-wrapper next" onClick={next}></div>
                                     <div className="dot-section">
-                                        {images.map(({id}) => 
+                                        {images.map(({ id }) =>
                                             <span key={id} className={`${selectedImg === id ? 'selected' : ''}`} onClick={() => setImage(id)}></span>
                                         )}
                                     </div>

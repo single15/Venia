@@ -9,32 +9,36 @@ import ProductHeader from "components/product/header/productHeader";
 import { BREADCRUMB_LINKS } from "pages/utils";
 import Loader from 'components/loader/loader';
 import { ReactComponent as WhishlistIcon } from 'assets/heart.svg';
+import { ReactComponent as RedWhishlistIcon } from 'assets/red-heart.svg';
 import { ReactComponent as ShareIcon } from 'assets/share-2.svg';
 import Button from "components/button/button";
 import ButtonLink from "components/button/buttonLink";
 import ProductInfo from "components/product/productInfo";
 import { addToCart } from "reducer/cart";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Gallery from "components/product/gallery/gallery";
 import 'pages/product/productDetailPage.scss';
 
 
 
-const ButtonSection = ({ handleClick, disabled, addItemToWishlist }) => (
-    <div className="aem-Grid aem-Grid--12 button-section">
-        <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--12 aem-GridColumn--phone--12">
-            <Button type="primary" onClick={handleClick} disabled={disabled}>Add To Cart</Button>
+const ButtonSection = ({ itemId, handleClick, disabled, addItemToWishlist }) => {
+    const wishListItems = useSelector((store) => store.wishlist.list)
+    return (
+        <div className="aem-Grid aem-Grid--12 button-section">
+            <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--12 aem-GridColumn--phone--12">
+                <Button type="primary" onClick={handleClick} disabled={disabled}>Add To Cart</Button>
+            </div>
+            <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--12 aem-GridColumn--phone--12">
+                <ButtonLink onClick={addItemToWishlist}>
+                    {wishListItems.includes(itemId) ? <RedWhishlistIcon /> : <WhishlistIcon />}&nbsp;&nbsp;Save
+                </ButtonLink>
+                <ButtonLink>
+                    <ShareIcon />&nbsp;&nbsp;Share
+                </ButtonLink>
+            </div>
         </div>
-        <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--12 aem-GridColumn--phone--12">
-            <ButtonLink onClick={addItemToWishlist}>
-                <WhishlistIcon />&nbsp;&nbsp;Save
-            </ButtonLink>
-            <ButtonLink>
-                <ShareIcon />&nbsp;&nbsp;Share
-            </ButtonLink>
-        </div>
-    </div>
-)
+    )
+}
 
 
 const ProductDetailPage = () => {
@@ -103,7 +107,7 @@ const ProductDetailPage = () => {
                                         <FilterColorBlock selectColor={(value) => setColor(value)} singleSelection={true} />
                                         <FilterSizeBlock selectSize={(value) => setSize(value)} />
                                         <Quantity quantity={quantity} updateQuantity={value => updateQuantity(value)} />
-                                        <ButtonSection handleClick={addItemToCart} addItemToWishlist={addItemToWishlist} />
+                                        <ButtonSection itemId={item.id} handleClick={addItemToCart} addItemToWishlist={addItemToWishlist} />
                                     </div>
 
                                 </div>
