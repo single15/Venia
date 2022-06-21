@@ -13,7 +13,8 @@ const Router = () => (
   <BrowserRouter>
     <App>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="venia" element={<HomePage />} />
+        {/* <Route path="" element={<HomePage />} /> */}
         <Route path="product">
           <Route path="list" element={
             <React.Suspense fallback={<Loader />}>

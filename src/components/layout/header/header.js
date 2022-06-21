@@ -6,7 +6,7 @@ import { ReactComponent as ShoppingBag } from 'assets/shopping-bag.svg'
 import { ReactComponent as User } from 'assets/user.svg'
 import Media from 'react-media';
 import { NavLink } from 'react-router-dom';
-import 'components/header/header.scss';
+import 'components/layout/header/header.scss';
 
 
 const Menus = () => (

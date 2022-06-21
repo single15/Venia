@@ -7,7 +7,7 @@ export default function HomePage() {
 
     useEffect(() => {
         setTimeout(() => {
-            navigate('product/list')
+            navigate('/product/list')
         }, 8000)
     })
 
