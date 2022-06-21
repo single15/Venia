@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Visit Venia App
+This website is hosted at [Venia Demo App](https://single15.github.io/venia/).
 
 ## Available Scripts
 
