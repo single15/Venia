@@ -18,7 +18,7 @@ This Application built on Nodejs Platform.
 2. NPM - V8.1.2
 
 ## Other Libraries
-Application uses 3rd party libraries like below:
+Application used 3rd party libraries like below:
 1. **react-media** => This react npm package is used to handle responsiveness of application on different types of devices.
 2. **lodash** => This package is use to handle some javascript functionality 
 
