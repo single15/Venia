@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Media from "react-media";
+import { ReactComponent as Chevrondown } from 'assets/chevron-down.svg';
 import 'components/product/gallery/gallery.scss';
 
 const ImagesOption = ({ source, title, selected, handleClick }) => (
@@ -75,6 +76,11 @@ const Gallery = ({ source, title }) => {
                                         {images.map((item) => (
                                             <ImagesOption key={item.id} source={item.source} title={item.title} selected={selectedImg === item.id} handleClick={() => setImage(item.id)} />
                                         ))}
+                                        <div>
+                                            <center>
+                                                <Chevrondown />
+                                            </center>
+                                        </div>
                                     </div>
                                     <div>
                                         <center>

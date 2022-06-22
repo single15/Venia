@@ -18,6 +18,7 @@ import { addToCart } from "reducer/cart";
 import { useDispatch, useSelector } from "react-redux";
 import Gallery from "components/product/gallery/gallery";
 import 'pages/product/productDetailPage.scss';
+import { addToWishList } from "reducer/wishlist";
 
 
 
@@ -75,7 +76,7 @@ const ProductDetailPage = () => {
     }
 
     const addItemToWishlist = () => {
-        alert("Item added in wishlist");
+        dispatch(addToWishList(item.id));
     }
 
     return (

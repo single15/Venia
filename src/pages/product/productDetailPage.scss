@@ -22,8 +22,10 @@
     }
 
     @include desktop {
-        center {
-            text-align: left !important;
-        }
+        .product-info-section {
+            center {
+                text-align: left !important;
+            }
+        }        
     }
 }

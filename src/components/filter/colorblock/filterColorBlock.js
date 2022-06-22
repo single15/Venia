@@ -4,7 +4,6 @@ import 'components/filter/colorblock/filterColorBlock.scss';
 
 const COLOR_OPTIONS = [
     { label: 'Black', color: '#000000' },
-    { label: 'White', color: '#FFFFFF' },
     { label: 'Green', color: '#2D9D78' },
     { label: 'Yellow', color: '#FDBA5E' },
     { label: 'Blue', color: '#172BC4' },
