@@ -29,5 +29,6 @@ Application used 3rd party libraries like below:
 
 
 ### Desktop Report: 
-![LighthouseReportMobile](https://user-images.githubusercontent.com/102651970/175056989-b8da57da-2f4c-44cc-bc57-661863e342b7.PNG)
+![LighthouseReportDesktop](https://user-images.githubusercontent.com/102651970/175062499-83ef7f83-4a4e-41ce-b1f8-14babad9f7db.PNG)
+
 
