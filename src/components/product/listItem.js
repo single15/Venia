@@ -22,7 +22,7 @@ const ProductItem = (props) => {
                     <figure>
                         <img src={image} alt={title} width={100} />
                     </figure>
-                    <div>
+                    <div className="title">
                         <b>{title}</b>
                     </div>
                     <div>

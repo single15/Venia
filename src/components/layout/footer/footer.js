@@ -15,9 +15,7 @@ const FooterBlock = ({ blockLable, links }) => (
         <ul>
             {links.map((link) =>
                 <li key={link.label}>
-                    <Link to={link.to}>
-                        {link.label}
-                    </Link>
+                    {link.label}
                 </li>
             )}
         </ul>

@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Media from "react-media";
 import Quantity from "components/filter/quantity/quantity";
-import { ReactComponent as HeartIcon } from 'assets/heart.svg'
+import { ReactComponent as WhishlistIcon } from 'assets/heart.svg'
+import { ReactComponent as RedWhishlistIcon } from 'assets/red-heart.svg';
 import { ReactComponent as PencilIcon } from 'assets/edit-2.svg'
 import { ReactComponent as TrashIcon } from 'assets/trash-2.svg'
+import { ReactComponent as MoreIcon } from 'assets/more-horizontal.svg'
 import { NavLink } from "react-router-dom";
 import { addToCart, removeCart } from "reducer/cart";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addToWishList } from "reducer/wishlist";
 import 'components/cart/cartItem/cartItem.scss';
 
 const SelectedFeature = ({ label, value }) => (
@@ -17,14 +20,42 @@ const SelectedFeature = ({ label, value }) => (
 
 const getPrices = (quantity, price) => price * quantity;
 
+
+const ActionMenus = ({ id, removeCart, addItemToWishlist }) => {
+    const wishListItems = useSelector((store) => store.wishlist.list)
+    
+    return(
+    <>
+        <div>
+            <NavLink to={`/product/${id}`}>
+                <PencilIcon />&nbsp;&nbsp;Edit item
+            </NavLink>
+        </div>
+        <div onClick={removeCart}><TrashIcon /> &nbsp;&nbsp;Remove</div>
+        <div onClick={addItemToWishlist}>
+            {wishListItems.includes(id) 
+                ? <><RedWhishlistIcon />&nbsp;&nbsp;Saved</>
+                : <><WhishlistIcon />&nbsp;&nbsp;Save for later</>
+            }
+        </div>
+    </>
+
+    )
+}
+
 const CartItem = ({ item }) => {
+    const [showActionMenu, toggleActionMenu] = useState(false);
     const dispatch = useDispatch();
 
     const updateQuantity = (value) => {
-        if(value > 0) {
-            let quantity = value-item.quantity;
+        if (value > 0) {
+            let quantity = value - item.quantity;
             dispatch(addToCart({ ...item, quantity }));
         }
+    }
+
+    const addItemToWishlist = () => {
+        dispatch(addToWishList(item.id));
     }
 
     return (
@@ -52,21 +83,21 @@ const CartItem = ({ item }) => {
                     <Media query={'(max-width: 1200px)'}>
                         {matches => (
                             <>
-                               {matches ? <span>...</span>
-                                : <div className="action-section">
-                                    <div>
-                                        <NavLink to={`/product/${item.id}`}>
-                                            <PencilIcon />&nbsp;&nbsp;Edit item
-                                        </NavLink>
+                                {matches ? (
+                                    <div className="action-wrapper">
+                                        <span onClick={() => toggleActionMenu(!showActionMenu)}><MoreIcon /></span>
+                                        {showActionMenu && <div className="action-section">
+                                            <ActionMenus id={item.id} removeCart={() => dispatch(removeCart(item))} addItemToWishlist={addItemToWishlist} />
+                                        </div>}
                                     </div>
-                                    <div onClick={() => dispatch(removeCart(item))}><TrashIcon /> &nbsp;&nbsp;Remove</div>
-                                    <div onClick={() => alert("Item save for later.")}><HeartIcon /> &nbsp;&nbsp;Save for later</div>
-                                </div>}
+                                    )
+                                    : <div className="action-section">
+                                        <ActionMenus id={item.id} removeCart={() => dispatch(removeCart(item))} addItemToWishlist={addItemToWishlist} />
+                                    </div>}
 
                             </>
                         )}
                     </Media>
-
                 </div>
             </div>
         </section>

@@ -24,6 +24,34 @@
                     }
                 }
             }
+
+            .menus {
+                position: absolute;
+                top: 68px;
+                right: 0;
+                background: var(--gray-l1);
+                z-index: 9999;
+
+                ul {
+                    display: block;                    
+                    
+                    li {
+                        display: block;
+                        padding: 16px 0;
+
+                        a {
+                            text-decoration: none;
+                            color: var(--black);
+                        }
+                    }
+                }
+
+                .close {
+                    position: absolute;
+                    top: 16px;
+                    right: 16px;
+                }
+            }
         }
 
         &.desktop {

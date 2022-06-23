@@ -45,5 +45,16 @@
                 padding-bottom: var(--unnamed-pixel-8);
             }
         }
+
+        .title {
+            b {
+                font-size: var(--unnamed-font-size-12);
+            }
+
+            
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }

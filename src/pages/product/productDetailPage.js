@@ -31,7 +31,9 @@ const ButtonSection = ({ itemId, handleClick, disabled, addItemToWishlist }) => 
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--12 aem-GridColumn--phone--12">
                 <ButtonLink onClick={addItemToWishlist}>
-                    {wishListItems.includes(itemId) ? <RedWhishlistIcon /> : <WhishlistIcon />}&nbsp;&nbsp;Save
+                    {wishListItems.includes(itemId) 
+                        ? <><RedWhishlistIcon />&nbsp;&nbsp;Saved</> 
+                        : <><WhishlistIcon />&nbsp;&nbsp;Save</>}
                 </ButtonLink>
                 <ButtonLink>
                     <ShareIcon />&nbsp;&nbsp;Share
@@ -95,7 +97,7 @@ const ProductDetailPage = () => {
                                     <FilterColorBlock selectColor={(value) => setColor(value)} singleSelection={true} />
                                     <FilterSizeBlock selectSize={(value) => setSize(value)} />
                                     <Quantity quantity={quantity} updateQuantity={value => updateQuantity(value)} />
-                                    <ButtonSection handleClick={addItemToCart} addItemToWishlist={addItemToWishlist} />
+                                    <ButtonSection itemId={item.id} handleClick={addItemToCart} addItemToWishlist={addItemToWishlist} />
                                 </>
                                 :
                                 <div className="aem-Grid aem-Grid--12">

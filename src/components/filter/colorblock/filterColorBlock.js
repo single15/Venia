@@ -25,7 +25,7 @@ const FilterColorBlock = (props) => {
             setSelectedColors([...selectedColors, label])
         }
         setSelectedColor(label)
-        props.selectColor(label);
+        props.selectColor && props.selectColor(label);
     }
 
 

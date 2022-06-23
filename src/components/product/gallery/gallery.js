@@ -55,7 +55,7 @@ const Gallery = ({ source, title }) => {
                                 <div className="gallery-slider-section">
                                     <figure className="gallery-section">
                                         {images.map((item) => (
-                                            <div key={item.id} className={`image-block ${selectedImg === item.id ? 'selected' : ''}`}>
+                                            <div key={item.id} className={`image-block ${selectedImg === item.id ? 'selected' : ''}`} style={{backgroundColor: item.backgroundColor}}>
                                                 <center>
                                                     <img src={item.source} alt={item.title} width={300} />
                                                 </center>

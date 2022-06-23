@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from 'react-modal';
 import FilterBlock from "components/filter/filterBlock";
 import FilterColorBlock from "components/filter/colorblock/filterColorBlock";
@@ -9,6 +9,18 @@ import 'components/filter/modal/filterModal.scss';
 
 
 const FilterModal = ({ open, closeModal }) => {
+    const [selectedFilter, setFilter] = useState();
+
+    const setFilterValue = (value) => {
+        let items = selectedFilter || [];
+        const index = (selectedFilter || []).indexOf(value);
+        if(index > -1) {
+            items = selectedFilter.filter(f => f !== value);
+        } else {
+            items = [...items, value];
+        }
+        setFilter(items);
+    }
 
     return (
         <Modal isOpen={open} overlayClassName="filter-modal" ariaHideApp={false}>
@@ -19,11 +31,11 @@ const FilterModal = ({ open, closeModal }) => {
                 </div>
             </div>
             <div className="modal-content">
-                <FilterTag selectedFilter={['Black']} />
+                <FilterTag selectedFilter={selectedFilter} setFilterValue={setFilterValue} clearFilter={() => setFilter([])} />
+                <FilterBlock blockLabel={"Size"} options={SIZE_FILTER} setFilterValue={setFilterValue} selectedFilter={selectedFilter} />
+                <FilterBlock blockLabel={"Style"} options={STYLE_FILTER} setFilterValue={setFilterValue} selectedFilter={selectedFilter} />
                 <FilterColorBlock />
-                <FilterBlock blockLabel={"Size"} options={SIZE_FILTER} />
-                <FilterBlock blockLabel={"Style"} options={STYLE_FILTER} />
-                <FilterBlock blockLabel={"Brand"} options={BRAND_FILTER} />
+                <FilterBlock blockLabel={"Brand"} options={BRAND_FILTER} setFilterValue={setFilterValue} selectedFilter={selectedFilter}/>
             </div>
         </Modal>
     )

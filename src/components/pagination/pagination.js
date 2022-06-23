@@ -10,12 +10,12 @@ export const RECORDS_PER_PAGE = 9;
 
 const numPages = (length) => Math.ceil(length / RECORDS_PER_PAGE)
 
-const RenderPageNumbers = ({ pages, currentPage }) => {
+const RenderPageNumbers = ({ pages, currentPage, selectCurrentPage }) => {
     let pageArray = [];
     for(let num = 1; num <= pages; num++) {
         pageArray.push(num);
     }
-    return <>{pageArray.map((page) => <div key={page} className={`page-num-block ${currentPage === page ? 'selected-page' : ''}`}>{page}</div>)}</>;
+    return <>{pageArray.map((page) => <div key={page} className={`page-num-block ${currentPage === page ? 'selected-page' : ''}`} onClick={() => selectCurrentPage(page)}>{page}</div>)}</>;
 }
 
 const Pagination = ({ products }) => {
@@ -58,8 +58,13 @@ const Pagination = ({ products }) => {
         }
     }
 
+    const selectCurrentPage = (page) => {
+        dispatch(setCurrentPage(page));
+        updateList(page);
+    }
+
     useEffect(() => {
-        navigate(`/product/list?pageNumber=${currentPage}`, { replace: true });
+        navigate(`/venia?pageNumber=${currentPage}`, { replace: true });
     }, [currentPage, navigate]);
 
     useEffect(() => {
@@ -73,7 +78,7 @@ const Pagination = ({ products }) => {
                     {showPrev && <ChevronLeftIcon />}
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--8 page-num-section">
-                    <RenderPageNumbers pages={numPages(length)} currentPage={currentPage} />
+                    <RenderPageNumbers pages={numPages(length)} currentPage={currentPage} selectCurrentPage={selectCurrentPage} />
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--2 action-button" onClick={next}>
                     {showNext && <ChevronRightIcon />}
