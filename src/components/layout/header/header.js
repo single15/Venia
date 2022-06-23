@@ -45,10 +45,10 @@ const Header = () => {
                     <>
                         {matches ? (
                             <div className='aem-Grid aem-Grid--12 mobile'>
-                                <div className='aem-GridColumn aem-GridColumn--phone--4 aem-GridColumn--tablet--4' onClick={() => toggleMenu(!showMenu)}>
+                                <div className='aem-GridColumn aem-GridColumn--phone--2 aem-GridColumn--tablet--4' onClick={() => toggleMenu(!showMenu)}>
                                     <Hamburger />
                                 </div>
-                                <div className='aem-GridColumn aem-GridColumn--phone--4 aem-GridColumn--tablet--4'>
+                                <div className='aem-GridColumn aem-GridColumn--phone--6 aem-GridColumn--tablet--4'>
                                     <NavLink to="/venia">
                                         <Logo />
                                     </NavLink>

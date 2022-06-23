@@ -84,7 +84,7 @@ const Gallery = ({ source, title }) => {
                                     </div>
                                     <div>
                                         <center>
-                                            <img src={source} alt={title} width={400} />
+                                            <img className="main-image" src={source} alt={title} width="80%"  />
                                         </center>
                                     </div>
                                 </figure>

@@ -1,5 +1,6 @@
+@import 'style/mixins';
+
 .pagination-section {
-    width: 60%;
     margin: var(--unnamed-pixel-24) auto;
 
     .selected-page {
@@ -22,5 +23,9 @@
             padding: 0 var(--unnamed-pixel-10);
             cursor: pointer;
         }
+    }
+
+    @include desktop {
+        width: 60%;
     }
 }
