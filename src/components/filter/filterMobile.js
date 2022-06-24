@@ -8,7 +8,7 @@ import FilterModal from "components/filter/modal/filterModal";
 
 
 
-const FilterMobile = () => {
+const FilterMobile = ({ setSelectedItem }) => {
     const [openModal, toggleModal] = useState(false);
     const resultCount = useSelector(store => store.products.listCount)
 
@@ -19,7 +19,7 @@ const FilterMobile = () => {
                     <FilterIcon />&nbsp;
                     <span>Filter Results</span>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--phone--6 aem-GridColumn--tablet--6">
+                <div className="aem-GridColumn aem-GridColumn--phone--6 aem-GridColumn--tablet--6" onClick={setSelectedItem}>
                     <ArrowUp /><ArrowDown />&nbsp;
                     <span>Sort Products</span>
                 </div>

@@ -26,7 +26,7 @@ const ProductItem = (props) => {
                         <b>{title}</b>
                     </div>
                     <div>
-                        <b>$ {price}</b>
+                        <b>$ {price.toFixed(2)}</b>
                     </div>
                 </NavLink>
                 <div onClick={addToItemWishList}>

@@ -12,14 +12,14 @@ import Dropdown from 'components/dropdown/dropdown';
 import { useLocation } from 'react-router-dom';
 import { RECORDS_PER_PAGE } from 'components/pagination/pagination';
 import 'pages/product/listPage.scss';
+import { cloneDeep } from 'lodash';
 
+const PRICEHIGHTOLOW = "priceHighToLow";
+const PRICELOWTOHIGHT = "priceLowToHigh";
 
 const SORT_OPTION = [ 
-    { id: "latest", value: 'Latest' }, 
-    { id: "bestmatch", value: 'Best Match' },
-    { id: "position", value: 'Position' },
-    { id: "priceHighToLow", value: 'Price: High to Low' },
-    { id: "priceLowToHigh", value: 'Price: Low to High' },
+    { id: PRICEHIGHTOLOW, value: 'Price: High to Low' },
+    { id: PRICELOWTOHIGHT, value: 'Price: Low to High' },
 ]
 
 const useQuery = () => {
@@ -28,8 +28,21 @@ const useQuery = () => {
 }
 
 
+const sortByEntity = (value, products) => {
+    let items = cloneDeep(products);
+    if(value === PRICEHIGHTOLOW) {
+        items = items.sort((product1, product2) => { return product2.price - product1.price })
+    } else {
+        items = items.sort((product1, product2) => { return product1.price - product2.price })
+    }
+
+    return items;
+}
+
+
 export default function ProductListPage() {
     const [products, setProducts] = useState([]);
+    const [sortBy, setSortBy] = useState(PRICEHIGHTOLOW);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const cacheProducts = useSelector(store => store.products.list);
     const dispatch = useDispatch();
@@ -40,25 +53,29 @@ export default function ProductListPage() {
         const page = query.get("pageNumber") || 1;
         if (cacheProducts.length > 0) {
             let filterProducts = category ? cacheProducts.filter((product) => product.category === category) : cacheProducts;
+            filterProducts = sortByEntity(sortBy, filterProducts);
             setProducts(getPageData(page, filterProducts));
             setFilteredProducts(filterProducts);
         } else {
             fetch(`https://fakestoreapi.com/products`)
                 .then(res => res.json())
                 .then((data) => {
-                    setProducts(data);
                     dispatch(updateProducts(data));
                 });
         }
-    }, [dispatch, cacheProducts, query])
+    }, [dispatch, cacheProducts, query, sortBy])
 
 
     const getPageData = (pageNumber, products) => {
         let productArray = [];
         for(let i = (pageNumber-1) * RECORDS_PER_PAGE; i < (pageNumber * RECORDS_PER_PAGE) && i < products.length; i++) {
             productArray.push(products[i]);
-        }
+        };
         return productArray;
+    }
+
+    const sortProducts = (value) => {
+        setSortBy(value);       
     }
 
     return (
@@ -71,7 +88,7 @@ export default function ProductListPage() {
                             <>
                                 <div className='component-container'>
                                     <Breadcrumb links={BREADCRUMB_LINKS} />
-                                    <FilterMobile />
+                                    <FilterMobile setSelectedItem={() => sortProducts(sortBy === PRICEHIGHTOLOW ? PRICELOWTOHIGHT : PRICEHIGHTOLOW)} />
                                     <ProductList products={products} filteredProducts={filteredProducts} />
                                 </div>
                             </>
@@ -86,7 +103,7 @@ export default function ProductListPage() {
                                             <b>{filteredProducts.length} Results</b>                                            
                                         </div>
                                         <div className='aem-GridColumn aem-GridColumn--default--6 sorting-filter'>
-                                            <Dropdown options={SORT_OPTION} />
+                                            <Dropdown options={SORT_OPTION} selectedItem={sortBy}  setSelectedItem={(value) => sortProducts(value)} />
                                         </div>
                                     </div>
                                 </div>
