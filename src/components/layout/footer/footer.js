@@ -59,7 +59,7 @@ const Footer = () => {
                                 <div className='aem-GridColumn aem-GridColumn--tablet--12 aem-GridColumn--phone--12'>
                                     <span>Copyright©2022 Venia, Inc. </span>
                                     <span>
-                                        All rihgts reserved.
+                                        All rights reserved.
                                     </span>
                                 </div>
                                 <div className='aem-GridColumn aem-GridColumn--tablet--12 aem-GridColumn--phone--12'>
@@ -72,7 +72,7 @@ const Footer = () => {
                                     <Logo />
                                 </div>
                                 <div className='aem-GridColumn aem-GridColumn--default--4'>
-                                    <span>Copyright©2022 Venia, Inc. All rihgts reserved.</span>
+                                    <span>Copyright©2022 Venia, Inc. All rights reserved.</span>
                                 </div>
                                 <div className='aem-GridColumn aem-GridColumn--default--4'>
                                     <Link to="/">Term of Use</Link>
