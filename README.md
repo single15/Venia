@@ -29,10 +29,12 @@ If you get an error like _chunkloaderror: loading chunk 344 failed._ the simples
 
 # Lighthouse Report
 ### Mobile Report: 
-![LighthouseReportMobile](https://user-images.githubusercontent.com/102651970/175056936-6972b40a-b59d-408b-8bf7-e680f7508ae6.PNG)
+![image](https://user-images.githubusercontent.com/102651970/175464309-b129bfcb-afdf-40ae-8a75-f526adedb890.png)
+
 
 
 ### Desktop Report: 
-![LighthouseReportDesktop](https://user-images.githubusercontent.com/102651970/175062499-83ef7f83-4a4e-41ce-b1f8-14babad9f7db.PNG)
+![image](https://user-images.githubusercontent.com/102651970/175464449-e35b15da-cab9-4544-881a-e6f111fe110f.png)
+
 
 
