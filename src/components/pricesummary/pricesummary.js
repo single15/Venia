@@ -7,9 +7,9 @@ import { useSelector } from "react-redux";
 
 const getPrice = (isFree, isDiscount, price) => isFree ? 'FREE' : isDiscount ? `- $ ${price?.toFixed(2)}` : `$ ${price?.toFixed(2)}`;
 
-const  getPercentageValue = (price, discount) => {
+const  getPercentageValue = (discount, price) => {
     const discountedValue = price - (price * (discount/100));
-    return discountedValue < 0 ? discountedValue  * -1 : discountedValue;
+    return discountedValue < 0 ? discountedValue : discountedValue;
  } 
 
 const PriceSummaryItem = ({ label, price, isFree = false, isDiscount = false, isTotal = false }) => (
@@ -41,9 +41,9 @@ const PriceSummary = () => {
         });
 
         setSubTotal(total);
-        setCoupon(getPercentageValue(20, total));
+        setCoupon(total - getPercentageValue(20, total));
         setGiftCardValue(total > 150 ? 100 : 0);
-        setEstimatedTax(getPercentageValue(5, total));
+        setEstimatedTax(total - getPercentageValue(5, total));
         setIsFree(total > 500);
 
     }, [cartItems]);
