@@ -76,7 +76,7 @@ const Gallery = ({ source, title }) => {
                                         {images.map((item) => (
                                             <ImagesOption key={item.id} source={item.source} title={item.title} selected={selectedImg === item.id} handleClick={() => setImage(item.id)} />
                                         ))}
-                                        <div>
+                                        <div className="action-wrapper next" onClick={next}>
                                             <center>
                                                 <Chevrondown />
                                             </center>

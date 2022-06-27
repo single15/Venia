@@ -1,6 +1,7 @@
 .gallery-section {
     display: flex;
     justify-content: center;
+    user-select: none;
 
     .image-options {
         margin-right: var(--unnamed-pixel-16);
@@ -53,6 +54,7 @@
     position: relative;
 
     .action-wrapper {
+        cursor: pointer;
         position: absolute;
         top: 0;
         bottom: 0;
