@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/venia/static/css/main.0ea2bad3.css",
-    "main.js": "/venia/static/js/main.d8d06ab9.js",
+    "main.js": "/venia/static/js/main.f9f12926.js",
     "static/css/344.f0a25632.chunk.css": "/venia/static/css/344.f0a25632.chunk.css",
     "static/js/344.599a6f3e.chunk.js": "/venia/static/js/344.599a6f3e.chunk.js",
     "static/css/260.2d867b27.chunk.css": "/venia/static/css/260.2d867b27.chunk.css",
     "static/js/260.bff889bd.chunk.js": "/venia/static/js/260.bff889bd.chunk.js",
     "static/css/605.de484b03.chunk.css": "/venia/static/css/605.de484b03.chunk.css",
-    "static/js/605.8cd37855.chunk.js": "/venia/static/js/605.8cd37855.chunk.js",
+    "static/js/605.99f62330.chunk.js": "/venia/static/js/605.99f62330.chunk.js",
     "static/js/948.f513a846.chunk.js": "/venia/static/js/948.f513a846.chunk.js",
     "static/media/revicons.eot": "/venia/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/venia/static/media/revicons.57fd05d4ae650374c8de.ttf",
@@ -47,17 +47,17 @@
     "static/media/chevron-up.svg": "/venia/static/media/chevron-up.34eb825b9ee9fbaf0220af2415bc86ae.svg",
     "static/media/minus.svg": "/venia/static/media/minus.dcb5053cd69e68f81d6247e8cfc45ec9.svg",
     "main.0ea2bad3.css.map": "/venia/static/css/main.0ea2bad3.css.map",
-    "main.d8d06ab9.js.map": "/venia/static/js/main.d8d06ab9.js.map",
+    "main.f9f12926.js.map": "/venia/static/js/main.f9f12926.js.map",
     "344.f0a25632.chunk.css.map": "/venia/static/css/344.f0a25632.chunk.css.map",
     "344.599a6f3e.chunk.js.map": "/venia/static/js/344.599a6f3e.chunk.js.map",
     "260.2d867b27.chunk.css.map": "/venia/static/css/260.2d867b27.chunk.css.map",
     "260.bff889bd.chunk.js.map": "/venia/static/js/260.bff889bd.chunk.js.map",
     "605.de484b03.chunk.css.map": "/venia/static/css/605.de484b03.chunk.css.map",
-    "605.8cd37855.chunk.js.map": "/venia/static/js/605.8cd37855.chunk.js.map",
+    "605.99f62330.chunk.js.map": "/venia/static/js/605.99f62330.chunk.js.map",
     "948.f513a846.chunk.js.map": "/venia/static/js/948.f513a846.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ea2bad3.css",
-    "static/js/main.d8d06ab9.js"
+    "static/js/main.f9f12926.js"
   ]
 }
